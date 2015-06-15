@@ -12,7 +12,7 @@ if  CROSS_TOOL == 'gcc':
 	PLATFORM 	= 'gcc'
 	# EXEC_PATH 	= r'/opt/arm-2012.09/bin'
 	EXEC_PATH   = r'C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\bin'
-	EXEC_PATH   = '/opt/gcc-arm-none-eabi-4_8-2014q1_gri/bin'
+	EXEC_PATH   = '/usr/bin'
 elif CROSS_TOOL == 'keil':
 	PLATFORM 	= 'armcc'
 	EXEC_PATH 	= 'C:/Keil'
