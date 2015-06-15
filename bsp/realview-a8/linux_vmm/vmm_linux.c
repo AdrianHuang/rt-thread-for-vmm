@@ -175,7 +175,11 @@ int vmm_load_fw(const char* filename)
 	/* FIXME: we should not need this actually. But currently Linux would
 	 * hang without this. Let's just proceed and I will go back to handle
 	 * this in the future. */
-	memset((void*)VMM_BEGIN, 0, VMM_SIZE);
+	/*
+	 * Linux hangs with this memset call. Just comment out for the
+	 * workaround. Will take a look in the future.
+	 */
+	//memset((void*)VMM_BEGIN, 0, VMM_SIZE);
 
 	flp = filp_open(filename, O_RDONLY, S_IRWXU);
 	if (IS_ERR(flp))
